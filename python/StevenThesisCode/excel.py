@@ -8,17 +8,29 @@ class Excel:
         self.output_filename = output_filename
         self.files = os.listdir(self.folder_path)
         self.workbook = openpyxl.Workbook()
+        self.workbook.remove_sheet(self.workbook.active)
 
     def combine_sheets(self):
-        for file in self.files:
-            if file.endswith('.xlsx'):
-                wb = openpyxl.load_workbook(os.path.join(self.folder_path, file))
-                for sheet in wb:
-                    self.workbook.create_sheet(title=sheet.title, index=sheet.index)
-                    for row in sheet.rows:
-                        for cell in row:
-                            self.workbook[sheet.title][cell.column][cell.row].value = cell.value
-        self.workbook.save(self.output_filename)
+        print("Combining sheets from Excel files...")
+        desktop_path = os.path.join(os.path.expanduser('~'), 'Desktop')
+        file_path = os.path.join(desktop_path, self.output_filename)
+        if os.path.exists(file_path):
+            # File already exists, handle it appropriately
+            # For example, you can prompt the user to choose a different file name
+            # or automatically generate a unique file name
+            pass
+        else:
+            for file in self.files:
+                if file.endswith('.xlsx'):
+                    file_name, file_ext = os.path.splitext(file)
+                    wb = openpyxl.load_workbook(os.path.join(self.folder_path, file))
+                    for sheet in wb:
+                        new_sheet = self.workbook.create_sheet(title=file_name)
+                        new_sheet.insert_rows(0)
+                        for row in sheet.rows:
+                            for cell in row:
+                                new_sheet[cell.coordinate].value = cell.value
+            self.workbook.save(file_path)
 
     def update_values(self, key, new_value):
         sheets = self.workbook.sheetnames
