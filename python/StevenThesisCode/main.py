@@ -3,6 +3,7 @@ from excel import Excel
 import sheet_correction
 import schmidt_diagram
 import matplotlib.pyplot as plt
+import fabric_diagram
 
 # Extract text from an image
 # ocr = Ocr("image.jpg")
@@ -88,9 +89,9 @@ sheet_correction.correct_sheet(file_path, conversion_dict)
 file_path = 'C:/Users/Steven McEwen/OneDrive - University of Cape Town/Desktop/Masters thesis/thesis_data_testing/combined/output.xlsx'
 #
 
-def main():
-    schmidt_diagram.create_polar_plots(file_path)
+
+schmidt_diagram.create_polar_plots(file_path)
 
 
-if __name__ == '__main__':
-    main()
+
+

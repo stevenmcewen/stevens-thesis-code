@@ -16,6 +16,9 @@ def create_polar_plots(filepath):
         plt.figure(figsize=(6, 6), dpi=80)
         ax = plt.subplot(111, projection='polar')
 
+        # Create a grid with a radius of 0.25
+        ax.grid(color='gray', linestyle='dotted', linewidth=0.25, alpha=0.5)
+
         # Create a scatter plot using the r and theta values
         ax.scatter(theta, r, marker='o', c='r')
 
