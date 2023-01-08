@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1044c02-b8e7-46db-b66f-afd37c66a920" name="Changes" comment="new location">
-      <change afterPath="$PROJECT_DIR$/python/StevenThesisCode/density_diagrams.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/StevenThesisCode/fabric_diagram.py" afterDir="false" />
+    <list default="true" id="e1044c02-b8e7-46db-b66f-afd37c66a920" name="Changes" comment="added grid to density diagrams">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/density_diagrams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/density_diagrams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/my_personal_site_flask/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/my_personal_site_flask/Stevens_website/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/my_personal_site_flask/Stevens_website/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +36,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
   <component name="RunManager" selected="Python.main">
     <configuration name="density_diagrams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="stevens-thesis-code" />
@@ -101,7 +108,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673026223608</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="new location">
+      <created>1673077647103</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673077647103</updated>
+    </task>
+    <task id="LOCAL-00003" summary="new location">
+      <created>1673077677295</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673077677296</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added grid to density diagrams">
+      <created>1673077696388</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673077696388</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,7 +144,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="added grid overlay to fabric diagrams" />
     <MESSAGE value="new location" />
-    <option name="LAST_COMMIT_MESSAGE" value="new location" />
+    <MESSAGE value="added grid to density diagrams" />
+    <option name="LAST_COMMIT_MESSAGE" value="added grid to density diagrams" />
   </component>
 </project>
