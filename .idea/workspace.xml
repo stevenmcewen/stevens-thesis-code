@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1044c02-b8e7-46db-b66f-afd37c66a920" name="Changes" comment="fixed all axis">
-      <change afterPath="$PROJECT_DIR$/python/StevenThesisCode/calculations for density.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/density_diagrams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/density_diagrams.py" afterDir="false" />
+    <list default="true" id="e1044c02-b8e7-46db-b66f-afd37c66a920" name="Changes" comment="x and y coordinates are added to sheet">
       <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/sheet_correction.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/sheet_correction.py" afterDir="false" />
     </list>
@@ -166,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673352452170</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="x and y coordinates are added to sheet">
+      <created>1673358992955</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673358992955</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,6 +190,7 @@
     <MESSAGE value="added grid to density diagrams" />
     <MESSAGE value="added ability to convert to radians" />
     <MESSAGE value="fixed all axis" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed all axis" />
+    <MESSAGE value="x and y coordinates are added to sheet" />
+    <option name="LAST_COMMIT_MESSAGE" value="x and y coordinates are added to sheet" />
   </component>
 </project>
