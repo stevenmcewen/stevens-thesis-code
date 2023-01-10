@@ -5,10 +5,10 @@ import schmidt_diagram
 import matplotlib.pyplot as plt
 from density_diagrams import create_density_plots
 
-# Extract text from an image
-# ocr = Ocr("image.jpg")
-# text = ocr.extract_text()
-# print(text)
+# # Extract text from an image
+# # ocr = Ocr("image.jpg")
+# # text = ocr.extract_text()
+# # print(text)
 
 # Combine sheets from Excel files in the specified folder
 excel = Excel("C:/Users/Steven McEwen/OneDrive - University of Cape Town/Desktop/Masters thesis/thesis_data_testing",
@@ -91,6 +91,6 @@ sheet_correction.correct_sheet(file_path, conversion_dict)
 #     main()
 
 # make the density plots
-create_density_plots(file_path)
+# create_density_plots(file_path)
 
 

@@ -9,7 +9,7 @@ def create_density_plots(filepath):
     # Iterate through the sheets dictionary
     for sheet_name, df in sheets.items():
         # Extract the r and radian values from the sheet
-        r = df['r values']
+        r = df['r values']/6.5
         radians = df['radian values']
 
         # Set up a polar axis
@@ -25,10 +25,10 @@ def create_density_plots(filepath):
         ax.get_yaxis().set_ticklabels([])
 
         # Add a third set of polar axes to the figure
-        axes_dict = {'r_values': [65, 65, 65], 'theta_values': [0, 1.57, 0.785]}
+        axes_dict = {'r_values': [10, ], 'theta_values': [0, ]}
         ax3 = plt.subplot(111, projection='polar')
         ax3.scatter(axes_dict['theta_values'], axes_dict['r_values'], marker='o', c='b', alpha=1, zorder=1)
-        ax3.set_ylim(0, 65)
+        ax3.set_ylim(0, 10)
 
         # Add a second set of axes with a 10x10 grid
         ax2 = plt.axes(projection='rectilinear')

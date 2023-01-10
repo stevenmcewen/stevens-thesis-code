@@ -82,11 +82,25 @@ def correct_sheet(file_path, conversion_dict):
             # Write the calculated "radian" value to the "radian" column
             sheet.cell(row=i + 1, column=26).value = radian_value
 
+        for i, (radian_value, r_value) in enumerate(zip(sheet['Z'], sheet['X'])):
+            # Skip the first row
+            if i == 0:
+                continue
+            r_value = r_value.value / 6.5
+            radian_value = radian_value.value
+            x_value = r_value * math.cos(radian_value)
+            y_value = r_value * math.sin(radian_value)
+            # Write the calculated "radian" value to the "radian" column
+            sheet.cell(row=i + 1, column=27).value = x_value
+            sheet.cell(row=i + 1, column=28).value = y_value
+
         # Set the value of the heading cell for the new column
         sheet.cell(row=1, column=4).value = "Corrected A4 values"
         sheet.cell(row=1, column=24).value = "r values"
         sheet.cell(row=1, column=25).value = "theta values"
         sheet.cell(row=1, column=26).value = "radian values"
+        sheet.cell(row=1, column=27).value = "x cartesian values"
+        sheet.cell(row=1, column=28).value = "y cartesian values"
 
     # Save the changes to the file
     wb.save(file_path)
