@@ -10,7 +10,7 @@ def create_polar_plots(filepath):
     for sheet_name, df in sheets.items():
         # Extract the r and theta values from the sheet
         r = df['r values']
-        theta = df['theta values']
+        radians = df['radian values']
 
         # Set up a polar axis
         plt.figure(figsize=(6, 6), dpi=80)
@@ -20,7 +20,7 @@ def create_polar_plots(filepath):
         ax.grid(color='gray', linestyle='dotted', linewidth=0.25, alpha=0.5)
 
         # Create a scatter plot using the r and theta values
-        ax.scatter(theta, r, marker='o', c='r')
+        ax.scatter(radians, r, marker='o', c='r')
 
         # Add a title and label to the plot
         ax.set_title(sheet_name)

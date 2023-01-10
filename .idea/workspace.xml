@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1044c02-b8e7-46db-b66f-afd37c66a920" name="Changes" comment="added grid to density diagrams">
+    <list default="true" id="e1044c02-b8e7-46db-b66f-afd37c66a920" name="Changes" comment="added ability to convert to radians">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/density_diagrams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/density_diagrams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/fabric_diagram.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/sheet_correction.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/sheet_correction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/schmidt_diagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/schmidt_diagram.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673077696388</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added ability to convert to radians">
+      <created>1673348576212</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673348576213</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +155,7 @@
     <MESSAGE value="added grid overlay to fabric diagrams" />
     <MESSAGE value="new location" />
     <MESSAGE value="added grid to density diagrams" />
-    <option name="LAST_COMMIT_MESSAGE" value="added grid to density diagrams" />
+    <MESSAGE value="added ability to convert to radians" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ability to convert to radians" />
   </component>
 </project>
