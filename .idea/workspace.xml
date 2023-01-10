@@ -7,9 +7,8 @@
     <list default="true" id="e1044c02-b8e7-46db-b66f-afd37c66a920" name="Changes" comment="added grid to density diagrams">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/density_diagrams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/density_diagrams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/my_personal_site_flask/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/my_personal_site_flask/Stevens_website/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/my_personal_site_flask/Stevens_website/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/sheet_correction.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/sheet_correction.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -36,12 +36,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.main">
     <configuration name="density_diagrams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="stevens-thesis-code" />

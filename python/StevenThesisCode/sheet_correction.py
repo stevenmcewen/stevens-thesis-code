@@ -1,4 +1,5 @@
 import openpyxl
+import math
 
 
 def correct_sheet(file_path, conversion_dict):
@@ -70,10 +71,22 @@ def correct_sheet(file_path, conversion_dict):
             # Write the calculated "theta" value to the "theta" column
             sheet.cell(row=i + 1, column=25).value = theta_value
 
+        for i, cell in enumerate(sheet['Y']):
+            # Skip the first row
+            if i == 0:
+                continue
+            # Extract the A1 value from the cell
+            degree_value = cell.value
+            # Calculate the "radians" value based on the degree value
+            radian_value = math.radians(degree_value)
+            # Write the calculated "radian" value to the "radian" column
+            sheet.cell(row=i + 1, column=26).value = radian_value
+
         # Set the value of the heading cell for the new column
         sheet.cell(row=1, column=4).value = "Corrected A4 values"
         sheet.cell(row=1, column=24).value = "r values"
         sheet.cell(row=1, column=25).value = "theta values"
+        sheet.cell(row=1, column=26).value = "radian values"
 
     # Save the changes to the file
     wb.save(file_path)
