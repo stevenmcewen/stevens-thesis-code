@@ -28,23 +28,21 @@ for sheet_name in wb.sheetnames:
                     grid[(x, y)] += 1
                 else:
                     grid[(x, y)] += 0
-                    continue
 
-    grid_data = np.array([[grid[(x, y)] for y in range(-10, 11)] for x in range(-10, 11)])
+                tuples_with_z = [(x, y, z) for (x, y), z in grid.items()]
 
-    # Create a contour plot of the grid data
-    plt.contour(grid_data)
-    plt.colorbar()
-    plt.contour(grid_data, cmap='jet')
-    plt.grid()
-    plt.xlabel('x-axis')
-    plt.ylabel('y-axis')
-    plt.title('Contour Plot')
+    x, y, z = zip(*tuples_with_z)
 
-    # Display the plot
+    hist, xedges, yedges = np.histogram2d(x, y, weights=z, bins=(20, 20))
+    x_midp = xedges[:-1] + (xedges[1] - xedges[0]) / 2
+    y_midp = yedges[:-1] + (yedges[1] - yedges[0]) / 2
+
+    plt.contour(x_midp, y_midp, hist.T, colors='black')
+    plt.xlabel('X')
+    plt.ylabel('Y')
     plt.show()
-    print(grid)
-    # code to save the grid in some format or use it for further analysis
+
+
 
 
 
