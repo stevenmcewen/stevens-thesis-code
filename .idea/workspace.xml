@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1044c02-b8e7-46db-b66f-afd37c66a920" name="Changes" comment="done a density plot">
-      <change afterPath="$PROJECT_DIR$/python/StevenThesisCode/test_combined.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/distance_calcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/distance_calcs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/distance_calcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/fabric_diagrams.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/schmidt_diagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/schmidt_diagram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/test_combined.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.distance_calcs">
+  <component name="RunManager" selected="Python.main">
     <configuration name="calculations for density" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="stevens-thesis-code" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -64,7 +65,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="distance_calcs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="fabric_diagrams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="stevens-thesis-code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -76,7 +77,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/StevenThesisCode/distance_calcs.py" />
+      <option name="SCRIPT_NAME" value="D:\Personal folder\stevens-thesis-code\python\StevenThesisCode\fabric_diagrams.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -150,9 +151,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.distance_calcs" />
-        <item itemvalue="Python.test_combined" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.fabric_diagrams" />
+        <item itemvalue="Python.test_combined" />
         <item itemvalue="Python.calculations for density" />
         <item itemvalue="Python.schmidt_diagram" />
       </list>
@@ -251,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673442172215</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="done a density plot">
+      <created>1673454255754</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673454255754</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
