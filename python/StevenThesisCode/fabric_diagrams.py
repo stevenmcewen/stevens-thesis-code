@@ -7,8 +7,8 @@ import numpy as np
 from matplotlib.tri import Triangulation
 
 
-def make_fabric_diagrams(filepath):
-    wb = openpyxl.load_workbook(filepath)
+def make_fabric_diagrams(filepath_data_collecting, images_file_location):
+    wb = openpyxl.load_workbook(filepath_data_collecting)
 
     # Iterate over the sheet names in the workbook
     for sheet_name in wb.sheetnames:
@@ -77,5 +77,6 @@ def make_fabric_diagrams(filepath):
         ax.get_yaxis().set_ticklabels([])
         ax.set_title(sheet_name)
         plt.grid(visible=False)
+        plt.savefig(f"{images_file_location}{sheet_name}.png", dpi=300)
 
-        plt.show()
+

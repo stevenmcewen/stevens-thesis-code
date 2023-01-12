@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1044c02-b8e7-46db-b66f-afd37c66a920" name="Changes" comment="code neaten up">
+    <list default="true" id="e1044c02-b8e7-46db-b66f-afd37c66a920" name="Changes" comment="improved fabric diagrams">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/fabric_diagrams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/fabric_diagrams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/StevenThesisCode/schmidt_diagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/StevenThesisCode/schmidt_diagram.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673524906781</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="improved fabric diagrams">
+      <created>1673549146042</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1673549146042</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -311,6 +320,7 @@
     <MESSAGE value="done, but density are squares" />
     <MESSAGE value="done first rendition of circular density plots" />
     <MESSAGE value="code neaten up" />
-    <option name="LAST_COMMIT_MESSAGE" value="code neaten up" />
+    <MESSAGE value="improved fabric diagrams" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved fabric diagrams" />
   </component>
 </project>

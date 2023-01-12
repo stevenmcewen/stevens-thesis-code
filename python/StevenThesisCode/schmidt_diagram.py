@@ -2,9 +2,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-def create_schmidt_diagrams(filepath):
+def create_schmidt_diagrams(filepath_data_collecting, images_file_location):
     # Read in all the sheets from the xlsx file
-    sheets = pd.read_excel(filepath, sheet_name=None)
+    sheets = pd.read_excel(filepath_data_collecting, sheet_name=None)
 
     # Iterate through the sheets dictionary
     for sheet_name, df in sheets.items():
@@ -37,5 +37,5 @@ def create_schmidt_diagrams(filepath):
         # Add a title and label to the plot
         ax.set_title(sheet_name)
         ax.text(0, 1.1, sheet_name, transform=ax.transAxes, ha='center')
+        plt.savefig(f"{images_file_location}{sheet_name}.png", dpi=300)
 
-    plt.show()
