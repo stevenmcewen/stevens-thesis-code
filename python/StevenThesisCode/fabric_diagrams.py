@@ -2,7 +2,9 @@ import openpyxl
 import math
 from collections import defaultdict
 import matplotlib.pyplot as plt
+from scipy.spatial import Delaunay
 import numpy as np
+from matplotlib.tri import Triangulation
 
 
 def make_fabric_diagrams(filepath):
@@ -31,14 +33,38 @@ def make_fabric_diagrams(filepath):
 
                     tuples_with_z = [(x, y, z) for (x, y), z in grid.items()]
 
-        x, y, z = zip(*tuples_with_z)
+                    to_remove = {(-10, 10), (-9, 10), (-8, 10), (-7, 10), (-6, 10), (-5, 10), (-4, 10), (-3, 10),
+                                 (-2, 10), (-1, 10),
+                                 (10, 10), (9, 10), (8, 10), (7, 10), (6, 10), (5, 10), (4, 10), (3, 10), (2, 10),
+                                 (1, 10),
+                                 (-10, -10), (-9, -10), (-8, -10), (-7, -10), (-6, -10), (-5, -10), (-4, -10),
+                                 (-3, -10), (-2, -10), (-1, -10),
+                                 (10, -10), (9, -10), (8, -10), (7, -10), (6, -10), (5, -10), (4, -10), (3, -10),
+                                 (2, -10),
+                                 (1, -10), (-10, 9), (-9, 9), (-8, 9), (-7, 9), (-6, 9), (-5, 9), (10, 9), (9, 9),
+                                 (8, 9), (7, 9), (6, 9), (5, 9)
+                        , (-10, -9), (-9, -9), (-8, -9), (-7, -9), (-6, -9), (-5, -9), (10, -9), (9, -9), (8, -9),
+                                 (7, -9), (6, -9), (5, -9),
+                                 (-10, 8), (-9, 8), (-8, 8), (-7, 8), (10, 8), (9, 8), (8, 8), (7, 8), (-10, -8),
+                                 (-9, -8), (-8, -8), (-7, -8), (10, -8), (9, -8), (8, -8), (7, -8),
+                                 (-10, 7), (-9, 7), (-8, 7), (10, 7), (9, 7), (8, 7), (-10, -7), (-9, -7), (-8, -7),
+                                 (10, -7), (9, -7), (8, -7),
+                                 (-10, 6), (-9, 6), (10, 6), (9, 6), (-10, -6), (-9, -6), (10, -6), (9, -6),
+                                 (-10, 5), (-9, 5), (10, 5), (9, 5), (-10, -5), (-9, -5), (10, -5), (9, -5),
+                                 (-10, 4), (10, 4), (-10, -4), (10, -4), (-10, 3), (10, 3), (-10, -3), (10, -3),
+                                 (-10, 2), (10, 2), (-10, -2), (10, -2), (-10, 1), (10, 1), (-10, -1), (10, -1)}
+                    tuples_with_z = [tup for tup in tuples_with_z if (tup[0], tup[1]) not in to_remove]
 
-        hist, xedges, yedges = np.histogram2d(x, y, weights=z, bins=(20, 20))
-        x_midp = xedges[:-1] + (xedges[1] - xedges[0]) / 2
-        y_midp = yedges[:-1] + (yedges[1] - yedges[0]) / 2
+                    polar_tuples = [(math.atan2(y, x), math.hypot(x, y), z) for (x, y, z) in tuples_with_z]
 
-        plt.contour(x_midp, y_midp, hist.T, cmap='jet')
-        plt.grid(color='black', linewidth=1)
-        plt.xlabel('X')
-        plt.ylabel('Y')
+        fig = plt.figure()
+        ax = fig.add_subplot(111, projection='polar')
+
+        angles = [tup[0] for tup in polar_tuples]
+        distances = [tup[1] for tup in polar_tuples]
+        z_values = [tup[2] for tup in polar_tuples]
+
+        triangulation = Delaunay(np.column_stack((angles, distances)), incremental=True)
+        triangulation = Triangulation(angles, distances, triangles=triangulation.simplices)
+        ax.tricontour(triangulation, z_values, cmap='viridis')
         plt.show()
