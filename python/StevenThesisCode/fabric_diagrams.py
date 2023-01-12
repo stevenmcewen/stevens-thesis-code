@@ -63,10 +63,16 @@ def make_fabric_diagrams(filepath):
         angles = [tup[0] for tup in polar_tuples]
         distances = [tup[1] for tup in polar_tuples]
         z_values = [tup[2] for tup in polar_tuples]
+        number_of_rows = sheet.max_row - 1
+        z_values = [z_value/number_of_rows for z_value in z_values]
 
         triangulation = Delaunay(np.column_stack((angles, distances)), incremental=True)
         triangulation = Triangulation(angles, distances, triangles=triangulation.simplices)
-        ax.tricontour(triangulation, z_values, cmap='RdYlBu')
+        sm = plt.cm.ScalarMappable(cmap='inferno_r', norm=plt.Normalize(vmin=min(z_values), vmax=max(z_values)))
+        sm.set_array(z_values)
+        triangulation = ax.tricontour(triangulation, z_values, cmap='inferno_r',
+                                      norm=plt.Normalize(vmin=min(z_values), vmax=max(z_values)))
+        plt.colorbar(mappable=sm, ax=ax, orientation='vertical', aspect=10)
         ax.get_xaxis().set_ticklabels([])
         ax.get_yaxis().set_ticklabels([])
         ax.set_title(sheet_name)
