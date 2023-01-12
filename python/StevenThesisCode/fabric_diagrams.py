@@ -66,5 +66,10 @@ def make_fabric_diagrams(filepath):
 
         triangulation = Delaunay(np.column_stack((angles, distances)), incremental=True)
         triangulation = Triangulation(angles, distances, triangles=triangulation.simplices)
-        ax.tricontour(triangulation, z_values, cmap='viridis')
+        ax.tricontour(triangulation, z_values, cmap='RdYlBu')
+        ax.get_xaxis().set_ticklabels([])
+        ax.get_yaxis().set_ticklabels([])
+        ax.set_title(sheet_name)
+        plt.grid(visible=False)
+
         plt.show()
