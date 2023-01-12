@@ -3,6 +3,7 @@ from excel import Excel
 import sheet_correction
 from fabric_diagrams import make_fabric_diagrams
 from schmidt_diagram import create_schmidt_diagrams
+from circular_density_plot import make_circular_fabric_diagrams
 
 OUTPUT_FILE_START_LOCATION = "C:/Users/Steven McEwen/OneDrive - University of Cape Town/Desktop/Masters thesis/thesis_data_testing"
 OUTPUT_FILE_PATH = 'C:/Users/Steven McEwen/OneDrive - University of Cape Town/Desktop/Masters thesis/thesis_data_testing/combined/output.xlsx'
@@ -19,8 +20,11 @@ OUTPUT_FILE_PATH = 'C:/Users/Steven McEwen/OneDrive - University of Cape Town/De
 # # correct sheets and do conversions
 # sheet_correction.correct_sheet(OUTPUT_FILE_PATH)
 
-# make the schmidt_diagrams
-create_schmidt_diagrams(OUTPUT_FILE_PATH)
+# # make the schmidt_diagrams
+# create_schmidt_diagrams(OUTPUT_FILE_PATH)
 
-# make fabric diagrams
-make_fabric_diagrams(OUTPUT_FILE_PATH)
+# # make fabric diagrams
+# make_fabric_diagrams(OUTPUT_FILE_PATH)
+
+#  circular density plot
+make_circular_fabric_diagrams(OUTPUT_FILE_PATH)
