@@ -2,28 +2,40 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-def create_polar_plots(filepath):
+def create_schmidt_diagrams(filepath_data_collecting, images_file_location):
     # Read in all the sheets from the xlsx file
-    sheets = pd.read_excel(filepath, sheet_name=None)
+    sheets = pd.read_excel(filepath_data_collecting, sheet_name=None)
 
     # Iterate through the sheets dictionary
     for sheet_name, df in sheets.items():
-        # Extract the r and theta values from the sheet
-        r = df['r values']
-        theta = df['theta values']
+        # Extract the r and radian values from the sheet
+        r = df['r values']/6.5
+        radians = df['radian values']
 
         # Set up a polar axis
         plt.figure(figsize=(6, 6), dpi=80)
         ax = plt.subplot(111, projection='polar')
 
-        # Create a grid with a radius of 0.25
-        ax.grid(color='gray', linestyle='dotted', linewidth=0.25, alpha=0.5)
-
         # Create a scatter plot using the r and theta values
-        ax.scatter(theta, r, marker='o', c='r')
+        ax.scatter(radians, r, marker='o', c='g', alpha=1, zorder=0)
+        ax.grid(False)
+        ax.set_rlabel_position(0)
+        ax.set_theta_zero_location("E")
+        ax.get_xaxis().set_ticklabels([])
+        ax.get_yaxis().set_ticklabels([])
+
+        # Add a second set of axes with a 10x10 grid
+        ax2 = plt.axes(projection='rectilinear')
+        ax2.grid(True)
+        ax2.set_xlim(-10, 10)
+        ax2.set_ylim(-10, 10)
+        ax2.set_facecolor((1, 1, 1, 0.1))
+        ax2.xaxis.set_major_locator(plt.MultipleLocator(1))
+        ax2.yaxis.set_major_locator(plt.MultipleLocator(1))
+
 
         # Add a title and label to the plot
         ax.set_title(sheet_name)
         ax.text(0, 1.1, sheet_name, transform=ax.transAxes, ha='center')
+        plt.savefig(f"{images_file_location}{sheet_name}.png", dpi=300)
 
-        plt.show()
