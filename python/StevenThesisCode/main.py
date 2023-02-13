@@ -4,11 +4,17 @@ import sheet_correction
 from schmidt_diagram import create_schmidt_diagrams
 from fabric_diagrams import make_fabric_diagrams
 
+# # real
+# OUTPUT_FILE_START_LOCATION = "C:/Users/Steven McEwen/OneDrive - University of Cape Town/Desktop/Masters thesis/thesis_data"
+# OUTPUT_FILE_PATH = 'C:/Users/Steven McEwen/OneDrive - University of Cape Town/Desktop/Masters thesis/thesis_data/combined/output.xlsx'
+# IMAGES_FOLDER_FABRIC_DIAGRAM = 'C:/Users/Steven McEwen/OneDrive - University of Cape Town/Desktop/Masters thesis/thesis_data/combined/fabric_diagrams/'
+# IMAGES_FOLDER_SCHMIDT_DIAGRAM = 'C:/Users/Steven McEwen/OneDrive - University of Cape Town/Desktop/Masters thesis/thesis_data/combined/schmidt_diagrams/'
+
+# testing
 OUTPUT_FILE_START_LOCATION = "C:/Users/Steven McEwen/OneDrive - University of Cape Town/Desktop/Masters thesis/thesis_data_testing"
 OUTPUT_FILE_PATH = 'C:/Users/Steven McEwen/OneDrive - University of Cape Town/Desktop/Masters thesis/thesis_data_testing/combined/output.xlsx'
 IMAGES_FOLDER_FABRIC_DIAGRAM = 'C:/Users/Steven McEwen/OneDrive - University of Cape Town/Desktop/Masters thesis/thesis_data_testing/combined/fabric_diagrams/'
 IMAGES_FOLDER_SCHMIDT_DIAGRAM = 'C:/Users/Steven McEwen/OneDrive - University of Cape Town/Desktop/Masters thesis/thesis_data_testing/combined/schmidt_diagrams/'
-
 # # Extract text from an image
 # ocr = Ocr("image.jpg")
 # text = ocr.extract_text()
