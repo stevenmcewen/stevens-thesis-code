@@ -6,7 +6,6 @@ from scipy.spatial import Delaunay
 import numpy as np
 from matplotlib.tri import Triangulation
 from matplotlib.colors import ListedColormap
-import matplotlib.patches as mpatches
 
 
 def make_fabric_diagrams(filepath_data_collecting, images_file_location):
