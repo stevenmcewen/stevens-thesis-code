@@ -156,6 +156,13 @@ def correct_sheet(file_path):
             sheet.cell(row=i + 1, column=27).value = x_value
             sheet.cell(row=i + 1, column=28).value = y_value
 
+        for i, cell in enumerate(sheet['G']):
+            # Skip the first row
+            if i == 0:
+                continue
+            original_crystal_size = cell.value
+            sheet.cell(row=i + 1, column=7).value = round((original_crystal_size * 1.25), 2)
+
         # Set the value of the heading cell for the new column
         sheet.cell(row=1, column=4).value = "Corrected A4 values"
         sheet.cell(row=1, column=24).value = "r values"

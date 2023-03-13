@@ -165,7 +165,7 @@ def analyze_crystal_sizes(file_path):
         crystal_sizes = pd.Series(crystal_sizes).dropna()
         ax.boxplot(crystal_sizes, positions=[df.index.get_loc(sheet_name)])
     ax.set_xticklabels(df.index, rotation=90)
-    ax.set_ylabel('Crystal sizes')
+    ax.set_ylabel('Crystal sizes [cm^2]')
     plt.tight_layout()
     plt.savefig('boxplot_outliers.png', dpi=300)
 
@@ -177,7 +177,7 @@ def analyze_crystal_sizes(file_path):
         crystal_sizes = pd.Series(crystal_sizes).dropna()
         ax.boxplot(crystal_sizes, positions=[df.index.get_loc(sheet_name)], showfliers=False)
     ax.set_xticklabels(df.index, rotation=90)
-    ax.set_ylabel('Crystal sizes')
+    ax.set_ylabel('Crystal sizes [cm^2]')
     plt.tight_layout()
     plt.savefig('boxplot_no_outliers.png', dpi=300)
 
