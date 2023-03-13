@@ -32,3 +32,5 @@ sheet_correction.correct_sheet(OUTPUT_FILE_PATH)
 # statistics
 Statistics.calculate_orientation(OUTPUT_FILE_PATH)
 Statistics.spherical_aperture(OUTPUT_FILE_PATH)
+Statistics.visualisation(OUTPUT_FILE_PATH)
+Statistics.analyze_crystal_sizes(OUTPUT_FILE_PATH)
