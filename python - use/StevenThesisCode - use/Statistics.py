@@ -189,9 +189,11 @@ def visualisation(filepath):
 
     r_values_all = []
     s_values_all = []
+    sheet_names = []
 
     for sheet_name in wb.sheetnames:
         sheet = wb[sheet_name]
+        sheet_names.append(sheet_name)
         for i, cell in enumerate(sheet['AD']):
             if i == 0:
                 continue
@@ -213,3 +215,21 @@ def visualisation(filepath):
     ax.tick_params(axis='both', which='major', labelsize=12)
     plt.tight_layout()
     plt.savefig('r vs sa', dpi=300)
+
+    fig2, ax2 = plt.subplots(1, 1)
+    # Create the table
+    table_data = []
+    for i, sheet_name in enumerate(sheet_names):
+        row_data = [sheet_name, r_values_all[i], s_values_all[i]]
+        table_data.append(row_data)
+
+    # Set the column headers and format
+    col_labels = ['Sheet Name', 'R Value', 'S Value']
+    table_format = dict(colWidths=[0.3, 0.3, 0.3], cellLoc='center', loc='center')
+
+    # Create the table
+    ax2.table(cellText=table_data, colLabels=col_labels, **table_format)
+
+    # Hide the axis and save the image
+    ax2.axis('off')
+    plt.savefig('R and S values table.png', dpi=300)
